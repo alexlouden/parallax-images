@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Background Image Parallax</title>
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+	<style>
+		.row {
+			height: 500px;
+			position: relative;
+			overflow: hidden;
+		}
+		.row.solid {
+			background-color: white;
+		}
+		.row > .background {
+		  position: absolute;
+		  left: 0;
+		  right: 0;
+		  top: -300px;
+		  bottom: -300px;
+		  background-size: cover;
+		  background-repeat: no-repeat;
+		  background-position: center center;
+		}
+		.row > .background.image1 {
+			background-image: url(http://images.biosgraphy.com/biog-selflove2.jpg);
+		}
+		.row > .background.image2 {
+			background-image: url(http://images.biosgraphy.com/biog-burrito.jpg);
+		}
+		.row > .background.image3 {
+			background-image: url(http://images.biosgraphy.com/dim-ideas1.jpg);
+		}
+	</style>
+  </head>
+  <body>
+
+  <div class="row">
+    <div class="background image1" data-stellar-ratio="0.5" data-stellar-vertical-offset="0"></div>
+  </div>
+
+  <div class="row solid"></div>
+
+  <div class="row">
+    <div class="background image2" data-stellar-ratio="0.5" data-stellar-vertical-offset="0"></div>
+  </div>
+
+  <div class="row solid"></div>
+
+  <div class="row">
+    <div class="background image3" data-stellar-ratio="0.5" data-stellar-vertical-offset="0"></div>
+  </div>
+
+	<!-- Scripts -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js"></script>
+	<script type="text/javascript">
+		$.stellar({
+			horizontalScrolling: false,
+			positionProperty: 'transform'
+		})
+	</script>
+
+  </body>
+</html>
